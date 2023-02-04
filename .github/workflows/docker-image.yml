@@ -23,8 +23,8 @@ jobs:
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
       
-#     - name: Build and push
-#       uses: docker/build-push-action@v4
-#       with:
-#           push: true
-#           tags: user/app:latest
+    - name: Build and push
+      uses: docker/build-push-action@v4
+      with:
+          push: true
+          tags: dersacr.azurecr.io/user/app:latest
