@@ -28,3 +28,11 @@ jobs:
       with:
           push: true
           tags: dersacr.azurecr.io/user/app:latest
+          
+     
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'kaan-pro'
+        publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
+        images: 'dersacr.azurecr.io/user/app:latest'
+#         images: 'dersacr.azurecr.io/user/app:latest:${{ github.sha }}'     
